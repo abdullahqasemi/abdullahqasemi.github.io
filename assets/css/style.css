@@ -6,7 +6,7 @@
 body {
 	font-family: "Nunito", sans-serif;
 	background-color: var(--secondary-color);
-	background-image: url(/assets/img/bg2.jpg);
+	background-image: url(../img/bg2.jpg);
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
@@ -18,12 +18,15 @@ body {
 }
 body .overlay {
 	background: rgba(0, 0, 0, 0.6);
-	height: 100%;
+	height: 100vh;
 	width: 100%;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	text-align: center;
+}
+.hidden {
+	display: none;
 }
 .d-flex {
 	display: flex;
