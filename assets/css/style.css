@@ -1,0 +1,171 @@
+:root {
+	--primary-color: #e3a83a;
+	--secondary-color: #26282c;
+	--text-white: #eee;
+}
+body {
+	font-family: "Nunito", sans-serif;
+	background-color: var(--secondary-color);
+	background-image: url(/assets/img/bg2.jpg);
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	height: 100%;
+	padding: 0;
+	margin: 0;
+	color: var(--text-white);
+	width: 100%;
+}
+body .overlay {
+	background: rgba(0, 0, 0, 0.6);
+	height: 100%;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+}
+.d-flex {
+	display: flex;
+}
+.text-left {
+	text-align: left;
+}
+.main-card {
+	min-height: 550px;
+	width: 900px;
+	justify-content: space-between;
+	/* background: rgba(0, 0, 0, 0.5); */
+	background: linear-gradient(
+		to right,
+		rgba(30, 30, 30, 0.8) 20%,
+		rgba(30, 30, 30, 0.5) 100%
+	);
+	backdrop-filter: blur(10px);
+	border-radius: 10px;
+}
+.main-card > div {
+	width: 50%;
+	padding: 1rem;
+}
+.img {
+	width: 350px;
+	position: absolute;
+	right: 20px;
+	top: 115px;
+	filter: grayscale();
+}
+.left-card {
+	position: relative;
+	/* background: #202020d1; */
+	border-radius: 10px 0px 0px 10px;
+}
+.links {
+	position: absolute;
+	transform: rotate(-90deg);
+	left: -130px;
+	top: 320px;
+}
+.links a {
+	text-decoration: none;
+	color: var(--text-white);
+	font-weight: 900;
+	/* letter-spacing: 1px; */
+	display: block;
+	margin: 0 1.5rem;
+	font-size: 0.8rem;
+}
+.links a::after {
+	display: block;
+	content: "";
+	margin: 4px auto;
+	height: 3px;
+	border-radius: 2px;
+	width: 0;
+	background: var(--primary-color);
+	transition: all 0.4s;
+}
+.links a:hover::after,
+.links a.active::after {
+	width: 100%;
+}
+.right-card {
+	padding-top: 115px !important;
+	position: relative;
+}
+.right-card > div {
+	padding-left: 50px;
+	padding-right: 50px;
+}
+.right-card .bar {
+	width: 100px;
+	height: 3px;
+	border-radius: 2px;
+	background: var(--primary-color);
+}
+.right-card .title {
+	font-weight: 800;
+	font-size: 34px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+.right-card .sub-title {
+	font-weight: 600;
+	color: #a9a9a9;
+	letter-spacing: 2px;
+	font-size: 20px;
+	margin-top: 0px;
+	margin-bottom: 40px;
+}
+.right-card .desc {
+	color: #ccc;
+	font-size: 14px;
+	line-height: 1.7;
+}
+.social-links {
+	position: absolute;
+	bottom: 50px;
+	left: 0px;
+}
+.social-links a {
+	display: block;
+	margin: 0 12px;
+	text-decoration: none;
+	color: var(--primary-color);
+}
+.social-links a svg {
+	transition: all 0.3s;
+}
+.social-links a:hover svg {
+	transform: translateY(-10px);
+}
+.control-btns {
+	position: absolute;
+	bottom: 50px;
+	right: -70px;
+}
+.control-btns > a {
+	height: 40px;
+	width: 40px;
+	background: var(--primary-color);
+	color: var(--text-white);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+	transition: all 0.4s;
+}
+.control-btns > a:hover,
+.control-btns > a:active,
+.control-btns > a:focus {
+	box-shadow: 0 0 0 0.25rem rgba(253, 205, 49, 0.5);
+}
+.control-btns > a.prev {
+	transform: scaleX(-1);
+}
+.control-btns > a.next:hover {
+	transform: translateX(4px);
+}
+.control-btns > a.prev:hover {
+	transform: scaleX(-1) translateX(4px);
+}
